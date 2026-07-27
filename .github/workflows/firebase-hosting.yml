@@ -1,0 +1,38 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web app
+        run: npm run build
+
+      - name: Authenticate with Firebase service account
+        uses: google-github-actions/auth@v2
+        with:
+          # Add the repository secret named FIREBASE_SERVICE_ACCOUNT_TASKNOTES in GitHub Settings > Secrets and variables > Actions.
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TASKNOTES }}
+
+      - name: Deploy to Firebase Hosting
+        run: npx firebase-tools deploy --only hosting

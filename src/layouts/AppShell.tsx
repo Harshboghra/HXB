@@ -6,6 +6,7 @@ import { ThemeToggle } from '../components/ThemeToggle'
 import { Button } from '../components/Button'
 import { Panel } from '../components/Panel'
 import { BottomNav } from '../components/BottomNav'
+import { InstallPrompt } from '../components/InstallPrompt'
 
 export function AppShell() {
   const { user, logout } = useAuth()
@@ -39,6 +40,7 @@ export function AppShell() {
         <Outlet />
       </main>
 
+      <InstallPrompt />
       <BottomNav />
 
       {!firebaseConfigured ? (

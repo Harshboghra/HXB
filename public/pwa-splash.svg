@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Task Notes splash screen">
+  <defs>
+    <linearGradient id="splash-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <radialGradient id="splash-glow" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#splash-bg)" />
+  <circle cx="640" cy="220" r="260" fill="url(#splash-glow)" />
+  <rect x="390" y="170" width="500" height="380" rx="72" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14" stroke-width="8" />
+  <rect x="470" y="250" width="220" height="28" rx="14" fill="#f8fafc" fill-opacity="0.95" />
+  <rect x="470" y="310" width="280" height="20" rx="10" fill="#cbd5e1" fill-opacity="0.9" />
+  <rect x="470" y="352" width="240" height="20" rx="10" fill="#cbd5e1" fill-opacity="0.8" />
+  <rect x="470" y="394" width="180" height="20" rx="10" fill="#cbd5e1" fill-opacity="0.65" />
+  <text x="640" y="510" text-anchor="middle" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="56" font-weight="700">Task Notes</text>
+</svg>
